@@ -29,7 +29,15 @@ namespace WordCounter
     {
       Console.WriteLine("Enter a word: ");
       string word = Console.ReadLine();
-      return word;
+      if (RepeatCounter.IsAWord(word))
+      {
+        return word;
+      }
+      else
+      {
+        Console.WriteLine("Hey, That's not a real word! But I'll search for it anyway");
+        return word;
+      }
     }
     public static string GetSentance()
     {
@@ -42,11 +50,11 @@ namespace WordCounter
       if (repeatCounter.ContainsWord())
       {
         int wordCount = repeatCounter.WordRepeatCount();
-        Console.WriteLine("Total Word Count: " + wordCount);
+        Console.WriteLine("The word you entered shows ups: " + wordCount + " times");
       }
       else
       {
-        Console.WriteLine("The word you entered cannot be found in the sentance you entered. Please try again!"); 
+        Console.WriteLine("The word you entered cannot be found in the sentance you entered. Sorry!"); 
       }
     }
 		public static void RainbowPrint(string text)

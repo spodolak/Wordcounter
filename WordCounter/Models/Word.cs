@@ -32,7 +32,6 @@ namespace WordCounter.Models
       int wordCount = 0;
       foreach(string word in sentanceArray)
       {
-        Console.WriteLine(word);
         if (word.Contains(WordInput))
         {
           wordCount += 1;
@@ -40,7 +39,7 @@ namespace WordCounter.Models
       }
       return wordCount;
     }
-    public bool IsAWord(string userInput)
+    public static bool IsAWord(string userInput)
     {
       foreach (string entry in wordList)
       {

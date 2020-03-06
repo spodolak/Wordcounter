@@ -71,7 +71,7 @@ namespace WordCounter.Test
       RepeatCounter repeatCounter = new RepeatCounter();
       repeatCounter.AddWord("dgh");
       //Act
-      bool wordResult = repeatCounter.IsAWord(repeatCounter.WordInput);
+      bool wordResult = RepeatCounter.IsAWord(repeatCounter.WordInput);
       //Assert
       Assert.AreEqual(false, wordResult);
     }

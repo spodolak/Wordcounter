@@ -13,7 +13,6 @@ namespace WordCounter.Test
     {
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
-
       //Act
       repeatCounter.AddWord("walk");
       //Assert
@@ -23,8 +22,12 @@ namespace WordCounter.Test
     public void RepeatCounter_VerifyInputStringWithinRepeatCounter_String()
     {
       //Arrange
+      RepeatCounter repeatCounter = new RepeatCounter();
       //Act
+      repeatCounter.AddSentance("walk");
       //Assert
+      Assert.AreEqual("walk", repeatCounter.SentanceInput);
+
     }
     [TestMethod]
     public void SentanceToArray_IntakesUserSentanceAndReturnsArrayOfWords_WordString()

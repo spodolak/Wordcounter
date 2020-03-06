@@ -13,5 +13,9 @@ namespace WordCounter.Models
     {
       WordInput = userWord;
     }
+    public string AddSentance(string userWord)
+    {
+      return "";
+    }
   }
 }

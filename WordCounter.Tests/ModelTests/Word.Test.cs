@@ -64,6 +64,17 @@ namespace WordCounter.Test
       //Assert
       Assert.AreEqual(1, wordCount);
     }
+    [TestMethod]
+    public void IsAWord_ChecksToSeeIfUserWordIsInEnglishDictionary_false()
+    {
+      //Arrange
+      RepeatCounter repeatCounter = new RepeatCounter();
+      repeatCounter.AddWord("walk");
+      //Act
+      bool wordResult = repeatCounter.IsAWord();
+      //Assert
+      Assert.AreEqual(false, wordResult);
+    }
   } 
 
 }

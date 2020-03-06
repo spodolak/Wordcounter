@@ -16,6 +16,7 @@ A program that gathers both a word and sentence from a user, then checks how fre
 |Program takes sentance and divides it into separate words|"I took the cat for a walk"|"I" "took" "the" "cat" "for" "a" "walk"|
 |Program searches through the divided sentance to see if inputted occurs| Search: "I" "took" "the" "cat" "for" "a" "walk" | Yes, word "walk" occurs |
 |If word occurs, program counts how many times the word occurs|"I" "took" "the" "cat" "for" "a" "walk"|"walk" occurs 1 time|
+|Program notifies user if inputted word is not a real word| Dgh |Program returns user error statement|
 
 ## Setup/Installation Requirements
 

@@ -7,7 +7,7 @@ namespace WordCounter.Models
   {
     public string WordInput { get; set; }
     public string SentanceInput { get; set; }
-    // public static string[] wordList = System.IO.File.ReadAllLines(@"/Users/Guest/Desktop/WordCounter.Solution/WordCounter/Models/WordList.txt");
+    public static string[] wordList = System.IO.File.ReadAllLines(@"/Users/Guest/Desktop/WordCounter.Solution/WordCounter/Models/WordList.txt");
 
     public void AddWord(string userWord)
     {
@@ -39,6 +39,10 @@ namespace WordCounter.Models
         }
       }
       return wordCount;
+    }
+    public bool IsAWord()
+    {
+      return true;
     }
   }
 } 

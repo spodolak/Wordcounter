@@ -24,7 +24,7 @@ namespace WordCounter.Models
     }
     public bool ContainsWord()
     {
-      return SentanceInput.Contains(WordInput);
+      return SentanceInput.Contains(" " + WordInput + " ");
     }
   }
 } 

@@ -24,9 +24,9 @@ namespace WordCounter.Test
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
       //Act
-      repeatCounter.AddSentance("walk");
+      repeatCounter.AddSentance("I took the cat for a walk");
       //Assert
-      Assert.AreEqual("walk", repeatCounter.SentanceInput);
+      Assert.AreEqual("I took the cat for a walk", repeatCounter.SentanceInput);
 
     }
     [TestMethod]

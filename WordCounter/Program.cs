@@ -15,10 +15,15 @@ namespace WordCounter
       repeatCounter.AddWord(userWord);
       repeatCounter.AddSentance(userSentance);
       ShowWordCount(repeatCounter);
+      ShowGoodbye();
     }
     public static void ShowGreeting()
     {
-      Console.WriteLine("Welcome to my Console Application!");
+      RainbowPrint("Welcome to my Console Application!");
+    }
+    public static void ShowGoodbye()
+    {
+      RainbowPrint("Goodbye! Thanks for using my application");
     }
     public static string GetWord()
     {
@@ -44,6 +49,31 @@ namespace WordCounter
         Console.WriteLine("The word you entered cannot be found in the sentance you entered. Please try again!"); 
       }
     }
+    public static void RainbowPrint(string text)
+		{
+			char[] rainbowArray = text.ToCharArray();
+			ConsoleColor[] colors = (ConsoleColor[]) ConsoleColor.GetValues(typeof(ConsoleColor));
+			int i = 1;
+			foreach(char letter in rainbowArray)
+			{
+				if (i == 1 || i == 2 || i == 4  || i == 5|| i == 6) {
+					Console.ForegroundColor = colors[i];
+					Console.Write(letter);
+					i++;
+				} 
+        else if ( i >= 15 ) 
+        {
+          i++;
+        } 
+				else {
+					i = 1;
+					Console.ForegroundColor = colors[i];
+					Console.Write(letter);
+				}
+			}
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.WriteLine("");
+		}
   }
 }
   

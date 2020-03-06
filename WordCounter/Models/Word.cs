@@ -22,5 +22,9 @@ namespace WordCounter.Models
       string[] sentanceArray = userSentance.Split(" ");
       return sentanceArray;
     }
+    public static bool ContainsWord(string userSentance)
+    {
+      return false;
+    }
   }
 } 

@@ -44,8 +44,12 @@ namespace WordCounter.Test
     public void ContainsWord_SearchesForOccuranceUserWordInSentanceArray_True()
     {
       //Arrange
+      RepeatCounter repeatCounter = new RepeatCounter();
+      repeatCounter.AddSentance("I took the cat for a walk");
       //Act
+      bool result = RepeatCounter.ContainsWord(repeatCounter.SentanceInput);
       //Assert
+      Assert.AreEqual(true, result);
     }
     [TestMethod]
     public void WordRepeatCount_TotalsNumberOfTimesUserWordOccursInSentanceArray_integer()
@@ -54,6 +58,6 @@ namespace WordCounter.Test
       //Act
       //Assert
     }
-  }
+  } 
 
 }

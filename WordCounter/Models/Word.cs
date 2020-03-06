@@ -9,9 +9,9 @@ namespace WordCounter.Models
     public string SentanceInput { get; set; }
     // public static string[] wordList = System.IO.File.ReadAllLines(@"/Users/Guest/Desktop/WordCounter.Solution/WordCounter/Models/WordList.txt");
 
-    public string AddWordAddSentance(string userWord, string userSentance)
+    public void AddWord(string userWord)
     {
-      return "";
+      WordInput = userWord;
     }
   }
 }

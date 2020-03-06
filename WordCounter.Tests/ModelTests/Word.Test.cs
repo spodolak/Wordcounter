@@ -15,7 +15,7 @@ namespace WordCounter.Test
       RepeatCounter repeatCounter = new RepeatCounter();
 
       //Act
-      repeatCounter.AddWordAddSentance("walk","");
+      repeatCounter.AddWord("walk");
       //Assert
       Assert.AreEqual("walk", repeatCounter.WordInput);
     }

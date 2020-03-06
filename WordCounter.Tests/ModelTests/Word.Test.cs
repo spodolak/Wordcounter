@@ -45,9 +45,10 @@ namespace WordCounter.Test
     {
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
-      repeatCounter.AddSentance("I took the cat for a walk");
+      repeatCounter.AddWord("walk");
+      repeatCounter.AddSentance("I took my cat Walker for a walk");
       //Act
-      bool result = RepeatCounter.ContainsWord(repeatCounter.SentanceInput);
+      bool result = repeatCounter.ContainsWord();
       //Assert
       Assert.AreEqual(true, result);
     }

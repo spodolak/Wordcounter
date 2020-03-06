@@ -17,5 +17,10 @@ namespace WordCounter.Models
     {
       SentanceInput = userSentance;
     }
+    public static string[] SentanceToArray()
+    {
+      string[] sentanceArray = {"",""};
+      return sentanceArray;
+    }
   }
 }

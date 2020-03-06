@@ -33,8 +33,12 @@ namespace WordCounter.Test
     public void SentanceToArray_IntakesUserSentanceAndReturnsArrayOfWords_WordString()
     {
       //Arrange
+      RepeatCounter repeatCounter = new RepeatCounter();
+      repeatCounter.AddSentance("I took the cat for a walk");
       //Act
+      string[] sentanceArray = RepeatCounter.SentanceToArray();
       //Assert
+      Assert.AreEqual("took", sentanceArray[1]);
     }
     [TestMethod]
     public void ContainsWord_SearchesForOccuranceUserWordInSentanceArray_True()

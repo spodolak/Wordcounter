@@ -69,9 +69,9 @@ namespace WordCounter.Test
     {
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
-      repeatCounter.AddWord("walk");
+      repeatCounter.AddWord("dgh");
       //Act
-      bool wordResult = repeatCounter.IsAWord();
+      bool wordResult = repeatCounter.IsAWord(repeatCounter.WordInput);
       //Assert
       Assert.AreEqual(false, wordResult);
     }

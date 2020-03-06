@@ -40,9 +40,16 @@ namespace WordCounter.Models
       }
       return wordCount;
     }
-    public bool IsAWord()
+    public bool IsAWord(string userInput)
     {
-      return true;
+      foreach (string entry in wordList)
+      {
+        if (entry.Contains(userInput))
+        {
+          return true;
+        }
+      }
+      return false;
     }
   }
 } 

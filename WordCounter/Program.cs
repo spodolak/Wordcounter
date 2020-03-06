@@ -14,23 +14,25 @@ namespace WordCounter
       RepeatCounter repeatCounter = new RepeatCounter();
       repeatCounter.AddWord(userWord);
       repeatCounter.AddSentance(userSentance);
-      CheckIfWord();
+      ShowWordCount(repeatCounter);
     }
-    public static string ShowGreeting()
+    public static void ShowGreeting()
     {
       Console.WriteLine("Welcome to my Console Application!");
     }
     public static string GetWord()
     {
       Console.WriteLine("Enter a word: ");
-      return string word = Console.ReadLine();
+      string word = Console.ReadLine();
+      return word;
     }
     public static string GetSentance()
     {
       Console.WriteLine("Enter a sentance: ");
-      return string sentance = Console.ReadLine();
+      string sentance = Console.ReadLine();
+      return sentance;
     }
-    public static void ShowWordCount()
+    public static void ShowWordCount(RepeatCounter repeatCounter)
     {
       if (repeatCounter.ContainsWord())
       {
@@ -42,4 +44,6 @@ namespace WordCounter
         Console.WriteLine("The word you entered cannot be found in the sentance you entered. Please try again!"); 
       }
     }
+  }
+}
   

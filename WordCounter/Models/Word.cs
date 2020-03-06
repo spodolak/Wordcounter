@@ -17,9 +17,9 @@ namespace WordCounter.Models
     {
       SentanceInput = userSentance;
     }
-    public static string[] SentanceToArray()
+    public static string[] SentanceToArray(string userSentance)
     {
-      string[] sentanceArray = {"",""};
+      string[] sentanceArray = userSentance.Split(" ");
       return sentanceArray;
     }
   }

@@ -36,7 +36,7 @@ namespace WordCounter.Test
       RepeatCounter repeatCounter = new RepeatCounter();
       repeatCounter.AddSentance("I took the cat for a walk");
       //Act
-      string[] sentanceArray = RepeatCounter.SentanceToArray();
+      string[] sentanceArray = RepeatCounter.SentanceToArray(repeatCounter.SentanceInput);
       //Assert
       Assert.AreEqual("took", sentanceArray[1]);
     }

@@ -26,7 +26,7 @@ namespace WordCounter.Test
       //Act
       repeatCounter.AddSentance("I took the cat for a walk");
       //Assert
-      Assert.AreEqual("I took the cat for a walk", repeatCounter.SentanceInput);
+      Assert.AreEqual(" I took the cat for a walk ", repeatCounter.SentanceInput);
 
     }
     [TestMethod]
@@ -38,7 +38,7 @@ namespace WordCounter.Test
       //Act
       string[] sentanceArray = RepeatCounter.SentanceToArray(repeatCounter.SentanceInput);
       //Assert
-      Assert.AreEqual("took", sentanceArray[1]);
+      Assert.AreEqual("took", sentanceArray[2]);
     }
     [TestMethod]
     public void ContainsWord_SearchesForOccuranceUserWordInSentanceArray_True()

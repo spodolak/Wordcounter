@@ -15,7 +15,7 @@ namespace WordCounter.Models
     }
     public void AddSentance(string userSentance)
     {
-      SentanceInput = userSentance;
+      SentanceInput = " " + userSentance + " ";
     }
     public static string[] SentanceToArray(string userSentance)
     {

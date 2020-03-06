@@ -11,7 +11,7 @@ namespace WordCounter.Models
 
     public void AddWord(string userWord)
     {
-      WordInput = userWord;
+      WordInput = " " + userWord + " ";
     }
     public void AddSentance(string userSentance)
     {
@@ -24,7 +24,11 @@ namespace WordCounter.Models
     }
     public bool ContainsWord()
     {
-      return SentanceInput.Contains(" " + WordInput + " ");
+      return SentanceInput.Contains(WordInput);
+    }
+    public int WordRepeatCount()
+    {
+      return 0;
     }
   }
 } 

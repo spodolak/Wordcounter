@@ -9,17 +9,17 @@ namespace WordCounter.Test
   public class RepeatCounterTests
   {
     [TestMethod]
-    public void RepeatCounter_VerifyInputWordWithinRepeatCounter_String()
+    public void RepeatCounter_FormatAndVerifyInputWordWithinRepeatCounter_String()
     {
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
       //Act
       repeatCounter.AddWord("walk");
       //Assert
-      Assert.AreEqual("walk", repeatCounter.WordInput);
+      Assert.AreEqual(" walk ", repeatCounter.WordInput);
     }
     [TestMethod]
-    public void RepeatCounter_VerifyInputStringWithinRepeatCounter_String()
+    public void RepeatCounter_FormatAndVerifyInputStringWithinRepeatCounter_String()
     {
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
@@ -56,8 +56,13 @@ namespace WordCounter.Test
     public void WordRepeatCount_TotalsNumberOfTimesUserWordOccursInSentanceArray_integer()
     {
       //Arrange
+      RepeatCounter repeatCounter = new RepeatCounter();
+      repeatCounter.AddWord("walk");
+      repeatCounter.AddSentance("I took my cat Walker for a walk");
       //Act
+      int wordCount = repeatCounter.WordRepeatCount();
       //Assert
+      Assert.AreEqual(1, wordCount);
     }
   } 
 

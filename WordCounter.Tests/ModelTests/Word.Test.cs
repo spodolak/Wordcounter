@@ -9,14 +9,14 @@ namespace WordCounter.Test
   public class RepeatCounterTests
   {
     [TestMethod]
-    public void RepeatCounter_FormatAndVerifyInputWordWithinRepeatCounter_String()
+    public void RepeatCounter_VerifyInputWordWithinRepeatCounter_String()
     {
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
       //Act
       repeatCounter.AddWord("walk");
       //Assert
-      Assert.AreEqual(" walk ", repeatCounter.WordInput);
+      Assert.AreEqual("walk", repeatCounter.WordInput);
     }
     [TestMethod]
     public void RepeatCounter_FormatAndVerifyInputStringWithinRepeatCounter_String()
@@ -38,7 +38,7 @@ namespace WordCounter.Test
       //Act
       string[] sentanceArray = RepeatCounter.SentanceToArray(repeatCounter.SentanceInput);
       //Assert
-      Assert.AreEqual("took", sentanceArray[2]);
+      Assert.AreEqual("walk", sentanceArray[7]);
     }
     [TestMethod]
     public void ContainsWord_SearchesForOccuranceUserWordInSentanceArray_True()
@@ -58,7 +58,7 @@ namespace WordCounter.Test
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
       repeatCounter.AddWord("walk");
-      repeatCounter.AddSentance("I took my cat Walker for a walk");
+      repeatCounter.AddSentance("I took my cat Walker for a walk!");
       //Act
       int wordCount = repeatCounter.WordRepeatCount();
       //Assert

@@ -6,31 +6,31 @@ namespace WordCounter.Models
   public class RepeatCounter 
   {
     public string WordInput { get; set; }
-    public string SentanceInput { get; set; }
+    public string SentenceInput { get; set; }
     public static string[] wordList = System.IO.File.ReadAllLines(@"/Users/Guest/Desktop/WordCounter.Solution/WordCounter/Models/WordList.txt");
 
     public void AddWord(string userWord)
     {
       WordInput = userWord;
     }
-    public void AddSentance(string userSentance)
+    public void AddSentence(string userSentence)
     {
-      SentanceInput = " " + userSentance + " ";
+      SentenceInput = " " + userSentence + " ";
     }
-    public static string[] SentanceToArray(string userSentance)
+    public static string[] SentenceToArray(string userSentence)
     {
-      string[] sentanceArray = userSentance.Split(" ");
-      return sentanceArray;
+      string[] sentenceArray = userSentence.Split(" ");
+      return sentenceArray;
     }
     public bool ContainsWord()
     {
-      return SentanceInput.Contains(WordInput);
+      return SentenceInput.Contains(WordInput);
     }
     public int WordRepeatCount()
     {
-      string[] sentanceArray = SentanceToArray(SentanceInput);
+      string[] sentenceArray = SentenceToArray(SentenceInput);
       int wordCount = 0;
-      foreach(string word in sentanceArray)
+      foreach(string word in sentenceArray)
       {
         if (word.Contains(WordInput))
         {

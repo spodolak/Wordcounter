@@ -24,41 +24,41 @@ namespace WordCounter.Test
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
       //Act
-      repeatCounter.AddSentance("I took the cat for a walk");
+      repeatCounter.AddSentence("I took the cat for a walk");
       //Assert
-      Assert.AreEqual(" I took the cat for a walk ", repeatCounter.SentanceInput);
+      Assert.AreEqual(" I took the cat for a walk ", repeatCounter.SentenceInput);
 
     }
     [TestMethod]
-    public void SentanceToArray_IntakesUserSentanceAndReturnsArrayOfWords_WordString()
+    public void SentenceToArray_IntakesUserSentenceAndReturnsArrayOfWords_WordString()
     {
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
-      repeatCounter.AddSentance("I took the cat for a walk");
+      repeatCounter.AddSentence("I took the cat for a walk");
       //Act
-      string[] sentanceArray = RepeatCounter.SentanceToArray(repeatCounter.SentanceInput);
+      string[] sentenceArray = RepeatCounter.SentenceToArray(repeatCounter.SentenceInput);
       //Assert
-      Assert.AreEqual("walk", sentanceArray[7]);
+      Assert.AreEqual("walk", sentenceArray[7]);
     }
     [TestMethod]
-    public void ContainsWord_SearchesForOccuranceUserWordInSentanceArray_True()
+    public void ContainsWord_SearchesForOccuranceUserWordInSentenceArray_True()
     {
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
       repeatCounter.AddWord("walk");
-      repeatCounter.AddSentance("I took my cat Walker for a walk");
+      repeatCounter.AddSentence("I took my cat Walker for a walk");
       //Act
       bool result = repeatCounter.ContainsWord();
       //Assert
       Assert.AreEqual(true, result);
     }
     [TestMethod]
-    public void WordRepeatCount_TotalsNumberOfTimesUserWordOccursInSentanceArray_integer()
+    public void WordRepeatCount_TotalsNumberOfTimesUserWordOccursInSentenceArray_integer()
     {
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
       repeatCounter.AddWord("walk");
-      repeatCounter.AddSentance("I took my cat Walker for a walk!");
+      repeatCounter.AddSentence("I took my cat Walker for a walk!");
       //Act
       int wordCount = repeatCounter.WordRepeatCount();
       //Assert

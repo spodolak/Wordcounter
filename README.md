@@ -1,6 +1,7 @@
 # _Word Counter_
 
 #### _Epicodus C# Independent Project_, _Mar. 6, 2020_
+#### A console application for a bakery
 
 #### By _**Stephanie Podolak**_
 
@@ -12,9 +13,9 @@ A program that gathers both a word and sentence from a user, then checks how fre
 | Specification | Example Input | Example Output |
 | :-------------:|:-------------:|:-------------:|
 |User inputs a word and program confirms word is valid|"walk"|word is stored with no output|
-|User inputs a sentance and program confirms input is valid |"I took the cat for a walk"|sentance is stored with no output|
-|Program takes sentance and divides it into separate words|"I took the cat for a walk"|"I" "took" "the" "cat" "for" "a" "walk"|
-|Program searches through the divided sentance to see if inputted occurs| Search: "I" "took" "the" "cat" "for" "a" "walk" | Yes, word "walk" occurs |
+|User inputs a sentence and program confirms input is valid |"I took the cat for a walk"|sentence is stored with no output|
+|Program takes sentence and divides it into separate words|"I took the cat for a walk"|"I" "took" "the" "cat" "for" "a" "walk"|
+|Program searches through the divided sentence to see if inputted occurs| Search: "I" "took" "the" "cat" "for" "a" "walk" | Yes, word "walk" occurs |
 |If word occurs, program counts how many times the word occurs|"I" "took" "the" "cat" "for" "a" "walk"|"walk" occurs 1 time|
 |Program notifies user if inputted word is not a real word| Dgh |Program returns user error statement|
 
@@ -60,6 +61,6 @@ _To view the source code of this application, open the folder in the Text Editor
 
 ### License
 
-*This webpage is licensed under the MIT license.*
+*This application is licensed under the MIT license.*
 
 Copyright (c) 2020 **_Stephanie Podolak_**

@@ -21,7 +21,7 @@ namespace WordCounter
     //Console greetings
     public static void ShowGreeting()
     {
-      RainbowPrint("Welcome to my Console Application!");
+      RainbowPrint("Welcome to my console application!");
     }
     public static void ShowGoodbye()
     {
@@ -35,7 +35,7 @@ namespace WordCounter
       string word = Console.ReadLine();
       if (RepeatCounter.IsAWord(word))
       {
-        return word;
+        return word.ToLower();
       }
       else
       {
@@ -47,7 +47,7 @@ namespace WordCounter
     {
       Console.WriteLine("Enter a sentence: ");
       string sentence = Console.ReadLine();
-      return sentence;
+      return sentence.ToLower();
     }
 
     //Checks and returns word count in user sentence

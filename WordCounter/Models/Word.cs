@@ -32,6 +32,7 @@ namespace WordCounter.Models
       int wordCount = 0;
       foreach(string word in sentenceArray)
       {
+        word.ToLower();
         if (word.Contains(WordInput))
         {
           wordCount += 1;

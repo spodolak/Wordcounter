@@ -41,12 +41,16 @@ namespace WordCounter.Models
     }
     public static bool IsAWord(string userInput)
     {
+      if (userInput.Contains(" "))
+      {
+        return false;
+      }
       foreach (string entry in wordList)
       {
         if (entry.Contains(userInput))
         {
           return true;
-        }
+        }     
       }
       return false;
     }

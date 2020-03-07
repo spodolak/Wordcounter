@@ -65,15 +65,15 @@ namespace WordCounter.Test
       Assert.AreEqual(1, wordCount);
     }
     [TestMethod]
-    public void IsAWord_ChecksToSeeIfUserWordIsInEnglishDictionary_false()
+    public void IsAWord_ChecksToSeeIfUserWordIsInEnglishDictionary_true()
     {
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
-      repeatCounter.AddWord("dgh");
+      repeatCounter.AddWord("date");
       //Act
       bool wordResult = RepeatCounter.IsAWord(repeatCounter.WordInput);
       //Assert
-      Assert.AreEqual(false, wordResult);
+      Assert.AreEqual(true, wordResult);
     }
   } 
 

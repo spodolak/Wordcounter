@@ -7,7 +7,7 @@ namespace WordCounter.Models
   {
     public string WordInput { get; set; }
     public string SentenceInput { get; set; }
-    public static string[] wordList = System.IO.File.ReadAllLines(@"/Users/Guest/Desktop/WordCounter.Solution/WordCounter/Models/WordList.txt");
+    public static string[] wordList = System.IO.File.ReadAllLines(@"C:\Users\Cadwell\Desktop\wordcounter\WordCounter\Models\WordList.txt");
 
     public void AddWord(string userWord)
     {
@@ -32,8 +32,8 @@ namespace WordCounter.Models
       int wordCount = 0;
       foreach(string word in sentenceArray)
       {
-        word.ToLower();
-        if (word.Contains(WordInput))
+        string newWord =word.ToLower();
+        if (newWord == WordInput)
         {
           wordCount += 1;
         }

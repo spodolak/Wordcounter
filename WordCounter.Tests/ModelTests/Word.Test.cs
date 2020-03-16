@@ -58,7 +58,7 @@ namespace WordCounter.Test
       //Arrange
       RepeatCounter repeatCounter = new RepeatCounter();
       repeatCounter.AddWord("walk");
-      repeatCounter.AddSentence("I took my cat Walker for a walk!");
+      repeatCounter.AddSentence("I took my cat Walker for a walk");
       //Act
       int wordCount = repeatCounter.WordRepeatCount();
       //Assert

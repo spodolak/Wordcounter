@@ -61,6 +61,6 @@ _To view the source code of this application, open the folder in the Text Editor
 
 ### License
 
-*This application is licensed under the MIT license.*
+[MIT](https://choosealicense.com/licenses/mit/)
 
 Copyright (c) 2020 **_Stephanie Podolak_**

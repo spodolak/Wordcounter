@@ -1,7 +1,7 @@
 # _Word Counter_
 
 #### _Epicodus C# Independent Project_, _Mar. 6, 2020_
-#### A console application for a bakery
+#### A console application built to word search
 
 #### By _**Stephanie Podolak**_
 
